@@ -19,23 +19,24 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        card1 = findViewById(R.id.Card1);
-        card1.setOnClickListener(new View.OnClickListener() {
+
+        card2 = findViewById(R.id.Card2);
+        card2.setOnClickListener(new View.OnClickListener() {
             @Override
 
 
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Growth", Toast.LENGTH_SHORT).show();
-                gen_syllabus();
+                startActivity(new Intent(MainActivity.this,growth_activity.class));
             }
         });
 
 
     }
 
-    public void gen_syllabus()
+   /* public void gen_syllabus()
     {
         Intent i = new Intent(this,growth_activity.class);
         startActivity(i);
-    }
+    }*/
 }
